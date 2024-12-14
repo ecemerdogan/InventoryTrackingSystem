@@ -40,5 +40,3 @@ Run the Application:
 ```
 dotnet run
 ```
-
-Usage
