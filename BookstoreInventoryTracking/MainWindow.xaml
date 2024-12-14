@@ -8,6 +8,8 @@
             <Button Content="Add New Item" Margin="10" Height="40" Name="BtnAddNewItem" Click="BtnAddNewItem_Click"/>
             <Button Content="Edit An Item" Margin="10" Height="40" Name="BtnEditAnItem" Click="BtnEditAnItem_Click"/>
             <Button Content="Delete An Item" Margin="10" Height="40" Name="BtnDeleteAnItem" Click="BtnDeleteAnItem_Click"/>
+            <Button Content="Raise All Items By 5" Margin="10" Height="40" Name="BtnRiseItem" Click="BtnRaiseItem_Click"/>
+            <Button Content="Clear All" Margin="10" Height="40" Name="BtnClc" Click="BtnClc_Click"/>
         </StackPanel>
 
         <!-- Ana İçerik -->

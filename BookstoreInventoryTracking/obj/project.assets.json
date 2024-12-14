@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hkn-t\\source\\repos\\BookstoreInventoryTracking\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
+      "projectUniqueName": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
       "projectName": "BookstoreInventoryTracking",
-      "projectPath": "C:\\Users\\hkn-t\\source\\repos\\BookstoreInventoryTracking\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
+      "projectPath": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
       "packagesPath": "C:\\Users\\hkn-t\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hkn-t\\source\\repos\\BookstoreInventoryTracking\\BookstoreInventoryTracking\\obj\\",
+      "outputPath": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\InventoryTrackingSystem\\BookstoreInventoryTracking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

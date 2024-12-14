@@ -76,6 +76,15 @@ namespace BookstoreInventory
             OutOfStockGrid.ItemsSource = allBooks.Where(book => book.Quantity == 0).ToList();
         }
 
+        private void BtnRaiseItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Raise button clicked!");
+        }
+
+        private void BtnClc_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Clear button clicked!");
+        }
     }
 }
     // Kitap sınıfı
