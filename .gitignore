@@ -1,0 +1,59 @@
+# Visual Studio / .NET
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Oo]bj/
+[Bb]in/
+[Ll]ogs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.cache
+*.pdb
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/*
+!packages/build/
+!packages/build/pack.ps1
+!packages/build/psake.ps1
+!packages/build/psake.ps1*
+!packages/build/psake*
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Build Results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]ogs/
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Resharper
+*.DotSettings.user
+
+# Visual Studio Code settings
+.vscode/
+.history/
