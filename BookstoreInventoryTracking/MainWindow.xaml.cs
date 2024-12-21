@@ -6,7 +6,7 @@ namespace BookstoreInventory
 {
     public partial class MainWindow : Window
     {
-        
+
         private List<Book> allBooks; // Tüm ürünlerin listesi
         public MainWindow()
         {
@@ -45,6 +45,8 @@ namespace BookstoreInventory
         private void BtnAddNewItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Add New Item clicked!");
+            // Refresh the grids
+            RefreshGrids();
         }
 
         // "Add An Item" butonuna tıklandığında
@@ -56,23 +58,49 @@ namespace BookstoreInventory
         // "Delete An Item" butonuna tıklandığında
         private void BtnDeleteAnItem_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Delete An Item clicked!");
+            
+
+            if (InventoryTabControl.SelectedIndex == 0) // In Stock tab
+            {
+                var selectedBooks = InventoryGrid.SelectedItems.Cast<Book>().ToList();
+
+                foreach (var book in selectedBooks)
+                {
+                    allBooks.Remove(book);
+                    MessageBox.Show(book.Name + " which is written by " + book.Author + " is deleted!!");
+                }
+            }
+            else if (InventoryTabControl.SelectedIndex == 1) // Out of Stock tab
+            {
+                var selectedBooks = OutOfStockGrid.SelectedItems.Cast<Book>().ToList();
+
+                foreach (var book in selectedBooks)
+                {
+                    allBooks.Remove(book);
+                    MessageBox.Show(book.Name + " which is written by " + book.Author + " is deleted!!");
+                }
+            }
+
+            // Refresh the grids
+            RefreshGrids();
         }
 
         // Tabloyu dolduracak örnek veri
         private void LoadInventoryData()
         {
             allBooks = new List<Book>
-    {
-        new Book { ISBN = "978-3-16-148410-0", Name = "Book 1", Author = "Author A", Location = "Aisle 1", Price = 12.99, Quantity = 5 },
-        new Book { ISBN = "978-1-4028-9462-6", Name = "Book 2", Author = "Author B", Location = "Aisle 2", Price = 15.50, Quantity = 2 },
-        new Book { ISBN = "978-0-596-52068-7", Name = "Book 3", Author = "Author C", Location = "Aisle 3", Price = 18.75, Quantity = 0 } // Out of Stock
-    };
+            {
+                new Book { ISBN = "978-3-16-148410-0", Name = "Book 1", Author = "Author A", Location = "Aisle 1", Price = 12.99, Quantity = 5 },
+                new Book { ISBN = "978-1-4028-9462-6", Name = "Book 2", Author = "Author B", Location = "Aisle 2", Price = 15.50, Quantity = 2 },
+                new Book { ISBN = "978-0-596-52068-7", Name = "Book 3", Author = "Author C", Location = "Aisle 3", Price = 18.75, Quantity = 0 } // Out of Stock
+            };
 
-            // In Stock olanları filtrele
+            RefreshGrids();
+        }
+
+        private void RefreshGrids()
+        {
             InventoryGrid.ItemsSource = allBooks.Where(book => book.Quantity > 0).ToList();
-
-            // Out of Stock olanları filtrele
             OutOfStockGrid.ItemsSource = allBooks.Where(book => book.Quantity == 0).ToList();
         }
 
@@ -87,15 +115,15 @@ namespace BookstoreInventory
         }
     }
 }
-    // Kitap sınıfı
-    public class Book
-    {
-        public string ISBN { get; set; }
-        public string Name { get; set; }
-        public string Author { get; set; }
-        public string Location { get; set; }
-        public double Price { get; set; }
-        public int Quantity { get; set; } 
-    }
+// Kitap sınıfı
+public class Book
+{
+    public string ISBN { get; set; }
+    public string Name { get; set; }
+    public string Author { get; set; }
+    public string Location { get; set; }
+    public double Price { get; set; }
+    public int Quantity { get; set; }
+}
 
 
