@@ -1,12 +1,50 @@
-<Window x:Class="BookstoreInventoryTracking.Views.AddOrEditWindow"
+<Window x:Class="BookstoreInventory.AddItemWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:BookstoreInventoryTracking.Views"
-        mc:Ignorable="d"
-        Title="AddOrEditWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Add / Edit Item"
+        Height="300" Width="450"
+        ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Input Alanları -->
+        <TextBlock Text="ISBN:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="ISBNTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Name:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Author:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="AuthorTextBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Location:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="LocationTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Price:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="PriceTextBox" Grid.Row="4" Grid.Column="1" Margin="5"
+                 PreviewTextInput="PriceTextBox_PreviewTextInput"/>
+
+        <TextBlock Text="Quantity:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="QuantityTextBox" Grid.Row="5" Grid.Column="1" Margin="5"
+                 PreviewTextInput="QuantityTextBox_PreviewTextInput"/>
+
+
+        <!-- Kaydet ve İptal Butonları -->
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Kaydet" Width="75" Margin="5" Click="SaveButton_Click"/>
+            <Button Content="İptal" Width="75" Margin="5" Click="CancelButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
