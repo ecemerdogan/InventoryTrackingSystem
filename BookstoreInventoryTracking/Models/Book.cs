@@ -15,16 +15,17 @@ namespace BookstoreInventory.Models
                 OnPropertyChanged(nameof(IsSelected));
             }
         }
-        
-        public string ISBN { get; set; }
-        public string Name { get; set; }
-        public string Author { get; set; }
-        public string Location { get; set; }
-        public double Price { get; set; }
-        public int Quantity { get; set; }
-        
-        public event PropertyChangedEventHandler PropertyChanged;
-        
+
+        public string ISBN { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Author { get; set; } = string.Empty;
+        public string Location { get; set; } = string.Empty;
+        public double Price { get; set; } = 0.0;
+        public int Quantity { get; set; } = 0;
+
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

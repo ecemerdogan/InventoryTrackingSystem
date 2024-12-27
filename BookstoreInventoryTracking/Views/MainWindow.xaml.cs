@@ -4,16 +4,25 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Controls;
 using BookstoreInventory.Models;
+using System.Windows.Documents;
 
 namespace BookstoreInventory
 {
     public partial class MainWindow : Window
     {
+        public static bool IsLoggedIn { get; set; } = false; // Giriş durumunu takip etmek için
 
-        private ObservableCollection<Book> allBooks; // Tüm ürünlerin listesi
+        private ObservableCollection<Book> allBooks = []; // Tüm ürünlerin listesi
         public MainWindow()
         {
             InitializeComponent();
+            if (!IsLoggedIn)
+            {
+                MessageBox.Show("Unauthorized access detected. Redirecting to login page.");
+                var loginWindow = new LoginWindow();
+                loginWindow.Show();
+                this.Close(); // Ana pencereyi kapat
+            }
             LoadInventoryData(); // Tabloyu veriyle doldurmak için bir metot çağrısı
         }
 
@@ -171,7 +180,7 @@ namespace BookstoreInventory
             {
                 return OutOfStockGrid;
             }
-            return null; // Hiçbir sekme seçilmemişse
+            throw new InvalidOperationException("No tab is selected!");
         }
     }
 }

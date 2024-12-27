@@ -28,10 +28,8 @@
               "RelativeDocumentMoniker": "BookstoreInventoryTracking\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\MainWindow.xaml",
               "RelativeToolTip": "BookstoreInventoryTracking\\MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-21T15:32:29.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T15:32:29.046Z"
             },
             {
               "$type": "Document",
@@ -43,8 +41,7 @@
               "RelativeToolTip": "BookstoreInventoryTracking\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T15:32:32.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T15:32:32.92Z"
             }
           ]
         },

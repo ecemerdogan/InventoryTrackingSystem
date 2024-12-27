@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\App.xaml
-11407045341
+3-1502294392
 
-4-515387512
+81600139769
 1981124507420
-MainWindow.xaml;
+Views\AddOrEditWindow.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;
 
 False
 

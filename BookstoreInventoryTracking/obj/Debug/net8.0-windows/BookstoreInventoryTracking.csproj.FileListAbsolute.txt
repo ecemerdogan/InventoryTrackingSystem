@@ -46,8 +46,6 @@ C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Deb
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BookstoreInventoryTracking.runtimeconfig.json
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BookstoreInventoryTracking.dll
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BookstoreInventoryTracking.pdb
-C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking_MarkupCompile.cache
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.g.resources
@@ -80,3 +78,9 @@ C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\De
 C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\ref\BookstoreInventoryTracking.dll
 C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.baml
 C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.g.cs
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.baml
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.g.cs
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.baml
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
