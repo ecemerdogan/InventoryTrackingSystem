@@ -23,8 +23,6 @@ C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTra
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BookstoreInventoryTracking.runtimeconfig.json
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BookstoreInventoryTracking.dll
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BookstoreInventoryTracking.pdb
-C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking_MarkupCompile.cache
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.g.resources
@@ -84,3 +82,9 @@ C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Deb
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.baml
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
+C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.baml
+C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.baml
+C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\MainWindow.baml
+C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.g.cs
+C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
+C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\MainWindow.g.cs

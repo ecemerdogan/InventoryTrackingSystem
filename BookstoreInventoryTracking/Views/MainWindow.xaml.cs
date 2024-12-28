@@ -1,10 +1,8 @@
-﻿using System.Windows;
-using System.Collections.Generic;
+﻿
+using System.Windows;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Controls;
 using BookstoreInventory.Models;
-using System.Windows.Documents;
 
 namespace BookstoreInventory
 {
@@ -53,7 +51,7 @@ namespace BookstoreInventory
             }
         }
 
-        // "Add New Item" butonuna tıklandığında
+        // "Add" butonuna tıklandığında
         private void BtnAddNewItem_Click(object sender, RoutedEventArgs e)
         {
             var addWindow = new AddItemWindow();
@@ -64,7 +62,7 @@ namespace BookstoreInventory
             RefreshGrids();
         }
 
-        // "Add An Item" butonuna tıklandığında
+        // "Edit" butonuna tıklandığında
         private void BtnEditAnItem_Click(object sender, RoutedEventArgs e)
         {
             DataGrid SelectedGrid = GetSelectedDataGrid();
@@ -79,7 +77,7 @@ namespace BookstoreInventory
             {
                 var selectedBook = SelectedBooks.First();
                 var editWindow = new AddItemWindow(selectedBook);
-        
+
                 if (editWindow.ShowDialog() == true)
                 {
                     // Seçilen kitabı güncelle
@@ -97,8 +95,8 @@ namespace BookstoreInventory
                 MessageBox.Show("Please select a book to edit.");
             }
         }
-        
-        // "Delete An Item" butonuna tıklandığında
+
+        // "Delete" butonuna tıklandığında
         private void BtnDeleteAnItem_Click(object sender, RoutedEventArgs e)
         {
             DataGrid SelectedGrid = GetSelectedDataGrid();
@@ -120,8 +118,6 @@ namespace BookstoreInventory
             {
                 MessageBox.Show("Please select a book to delete.");
             }
-
-            // Refresh the grids
             RefreshGrids();
         }
 
@@ -184,5 +180,3 @@ namespace BookstoreInventory
         }
     }
 }
-
-

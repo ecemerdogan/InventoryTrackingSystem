@@ -1,34 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\hkn-t\\onedrive\\masa\u00FCst\u00FC\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\ecem\\desktop\\inventorytrackingsystem\\bookstoreinventorytracking\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\hkn-t\\onedrive\\masa\u00FCst\u00FC\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\hkn-t\\onedrive\\masa\u00FCst\u00FC\\inventorytrackingsystem\\bookstoreinventorytracking\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\hkn-t\\onedrive\\masa\u00FCst\u00FC\\inventorytrackingsystem\\bookstoreinventorytracking\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\hkn-t\\onedrive\\masa\u00FCst\u00FC\\inventorytrackingsystem\\bookstoreinventorytracking\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|c:\\users\\hkn-t\\onedrive\\masa\u00FCst\u00FC\\inventorytrackingsystem\\bookstoreinventorytracking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56EC685A-A803-4CB2-901C-A447EFBA978F}|BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj|solutionrelative:bookstoreinventorytracking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,69 +33,29 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 274,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 444,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\User.cs",
               "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\User.cs",
               "RelativeToolTip": "BookstoreInventoryTracking\\Models\\User.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAUwAcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-27T22:45:28.485Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Models\\Book.cs",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\Book.cs",
-              "RelativeToolTip": "BookstoreInventoryTracking\\Models\\Book.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvxoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T22:45:27.425Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "BookstoreInventoryTracking\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAUwLYAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T22:43:11.214Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwAkAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T21:55:16.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Views\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "BookstoreInventoryTracking\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-27T16:49:26.102Z",
@@ -107,32 +63,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\App.xaml",
-              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\App.xaml",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\App.xaml",
-              "RelativeToolTip": "BookstoreInventoryTracking\\App.xaml",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "BookstoreInventoryTracking\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-21T17:05:20.916Z",
+              "WhenOpened": "2024-12-27T16:30:57.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Views\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\ecem\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "BookstoreInventoryTracking\\Views\\MainWindow.xaml",
+              "DocumentIndex": 3,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "BookstoreInventoryTracking\\Views\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T21:55:16.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\Models\\Book.cs",
+              "ToolTip": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\Models\\Book.cs",
+              "RelativeToolTip": "BookstoreInventoryTracking\\Models\\Book.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAADwvxoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T22:45:27.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\App.xaml",
+              "RelativeDocumentMoniker": "BookstoreInventoryTracking\\App.xaml",
+              "ToolTip": "C:\\Users\\hkn-t\\OneDrive\\Masa\u00FCst\u00FC\\InventoryTrackingSystem\\BookstoreInventoryTracking\\App.xaml",
+              "RelativeToolTip": "BookstoreInventoryTracking\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-27T16:30:57.801Z",
+              "WhenOpened": "2024-12-21T17:05:20.916Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 78,
+          "DockedHeight": 347,
           "SelectedChildIndex": -1,
           "Children": [
             {
