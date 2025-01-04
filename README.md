@@ -9,7 +9,7 @@ The Inventory Tracking System is a C# and .NET-based application developed withi
 
 ***Framework:*** .NET Core
 
-***Database:*** PostgreSQL or SQL Server (configurable)
+***Database:*** PostgreSQL (AWS RDS)
 
 ***UI Framework:*** Windows Presentation Foundation (WPF)
 
@@ -40,3 +40,11 @@ Run the Application:
 ```
 dotnet run
 ```
+
+Accounts:
+```
+admin: password123
+user1: password456
+user2: password789
+```
+
