@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace BookstoreInventory.Models
+namespace BookstoreInventoryTracking.Models
 {
     public class Book
     {

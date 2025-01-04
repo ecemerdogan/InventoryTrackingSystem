@@ -1,4 +1,4 @@
-﻿<Window x:Class="BookstoreInventory.MainWindow" 
+﻿<Window x:Class="BookstoreInventoryTracking.MainWindow" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Bookstore Inventory" Height="600" Width="900"
@@ -19,8 +19,8 @@
                 <Border Width="80" Height="80" CornerRadius="40" BorderBrush="#ecf0f1" BorderThickness="2" Margin="0,20">
                     <Image Source="C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\Images\user-profile.png" Stretch="Fill"/>
                 </Border>
-                <TextBlock Text="John Doe" FontWeight="Bold" FontSize="14" Foreground="White" HorizontalAlignment="Center"/>
-                <TextBlock Text="Admin" FontSize="12" Foreground="#bdc3c7" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="NameTextBlock" Text="John Doe" FontWeight="Bold" FontSize="14" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="UserRoleTextBlock" Text="Admin" FontSize="12" Foreground="#bdc3c7" HorizontalAlignment="Center"/>
             </StackPanel>
 
             <!-- Menü Butonları -->

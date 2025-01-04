@@ -1,9 +1,10 @@
-﻿using BookstoreInventory.Models;
+﻿using BookstoreInventoryTracking.Models;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
+using BookstoreInventoryTracking.Helpers;
 
-namespace BookstoreInventory
+namespace BookstoreInventoryTracking
 {
     public partial class LoginWindow : Window
     {
@@ -22,13 +23,14 @@ namespace BookstoreInventory
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string userId = txtUserId.Text;
+            string userName = txtUserId.Text;
             string password = txtPassword.Password;
 
-            if (ValidateUser(userId, password))
+            if (DatabaseHelper.ValidateUser(userName, password))
             {
                 MainWindow.IsLoggedIn = true; // Successful Login
                 MainWindow mainWindow = new MainWindow(); // Form Main Window
+                mainWindow.UpdateUserNameAndRole(DatabaseHelper.GetUserInfo(userName));
                 mainWindow.Show(); // Show Main Window
                 this.Close(); // Close the Login Page
             }
@@ -38,17 +40,17 @@ namespace BookstoreInventory
             }
         }
 
-        private bool ValidateUser(string userId, string password)
-        {
-            // Validation of the user.
-            allUsers = new ObservableCollection<User> 
-            {
-                new User{UserId = "admin", Password = "password123" },
-                new User{UserId = "user1", Password = "password456" },
-                new User{UserId = "user2", Password = "password789"}
-            };
-
-            return allUsers.Any(u => u.UserId == userId && u.Password == password); ;
-        }
+        // private bool ValidateUser(string userId, string password)
+        // {
+        //     // Validation of the user.
+        //     allUsers = new ObservableCollection<User> 
+        //     {
+        //         new User{UserId = "admin", Password = "password123" },
+        //         new User{UserId = "user1", Password = "password456" },
+        //         new User{UserId = "user2", Password = "password789"}
+        //     };
+        //
+        //     return allUsers.Any(u => u.UserId == userId && u.Password == password);
+        // }
     }
 }

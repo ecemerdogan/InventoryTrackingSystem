@@ -1,9 +1,9 @@
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
-using BookstoreInventory.Models;
+using BookstoreInventoryTracking.Models;
 
-namespace BookstoreInventory
+namespace BookstoreInventoryTracking
 {
     public partial class AddItemWindow : Window
     {

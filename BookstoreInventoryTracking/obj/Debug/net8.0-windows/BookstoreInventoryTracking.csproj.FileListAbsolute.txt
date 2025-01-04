@@ -88,3 +88,11 @@ C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTra
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddOrEditWindow.g.cs
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
 C:\Users\hkn-t\OneDrive\Masaüstü\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.baml
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.csproj.AssemblyReference.cache
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Bookstor.999612D4.Up2Date
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll

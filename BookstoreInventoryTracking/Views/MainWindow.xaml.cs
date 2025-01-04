@@ -2,9 +2,10 @@
 using System.Windows;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
-using BookstoreInventory.Models;
+using BookstoreInventoryTracking.Models;
+using BookstoreInventoryTracking.Helpers;
 
-namespace BookstoreInventory
+namespace BookstoreInventoryTracking
 {
     public partial class MainWindow : Window
     {
@@ -21,6 +22,7 @@ namespace BookstoreInventory
                 loginWindow.Show();
                 this.Close(); // Ana pencereyi kapat
             }
+
             LoadInventoryData(); // Tabloyu veriyle doldurmak için bir metot çağrısı
         }
 
@@ -57,9 +59,9 @@ namespace BookstoreInventory
             var addWindow = new AddItemWindow();
             if (addWindow.ShowDialog() == true)
             {
-                allBooks.Add(addWindow.NewBook);
+                DatabaseHelper.InsertBook(addWindow.NewBook);
+                LoadInventoryData();
             }
-            RefreshGrids();
         }
 
         // "Edit" butonuna tıklandığında
@@ -80,10 +82,8 @@ namespace BookstoreInventory
 
                 if (editWindow.ShowDialog() == true)
                 {
-                    // Seçilen kitabı güncelle
-                    var index = allBooks.IndexOf(selectedBook);
-                    allBooks[index] = editWindow.NewBook;
-                    RefreshGrids();
+                    DatabaseHelper.UpdateBook(editWindow.NewBook);
+                    LoadInventoryData();
                 }
             }
             else if (SelectedBooks.Count > 1)
@@ -108,23 +108,25 @@ namespace BookstoreInventory
 
             if (SelectedBooks.Count > 0)
             {
+                string deletedBooks = "";
                 foreach (var book in SelectedBooks)
                 {
-                    allBooks.Remove(book);
-                    MessageBox.Show(book.Name + " which is written by " + book.Author + " is deleted!!");
+                    DatabaseHelper.DeleteBook(book.ISBN);
+                    deletedBooks = book.Name + ", " + deletedBooks;
                 }
+                MessageBox.Show(deletedBooks + " are deleted!!");
+                LoadInventoryData();
             }
             else
             {
                 MessageBox.Show("Please select a book to delete.");
             }
-            RefreshGrids();
         }
 
         // Tabloyu dolduracak örnek veri
         private void LoadInventoryData()
         {
-            allBooks = new ObservableCollection<Book>
+            /* allBooks = new ObservableCollection<Book>
             {
                 new Book { ISBN = "978-3-16-148410-0", Name = "Book 1", Author = "Author A", Location = "Aisle 1", Price = 12.99, Quantity = 5 },
                 new Book { ISBN = "978-1-4028-9462-6", Name = "Book 2", Author = "Author B", Location = "Aisle 2", Price = 15.50, Quantity = 2 },
@@ -146,8 +148,9 @@ namespace BookstoreInventory
                 new Book { ISBN = "978-1-4028-9463-0", Name = "Book 18", Author = "Author R", Location = "Aisle 3", Price = 8.25, Quantity = 2 },
                 new Book { ISBN = "978-0-596-52068-11", Name = "Book 19", Author = "Author S", Location = "Aisle 4", Price = 5.99, Quantity = 9 },
                 new Book { ISBN = "978-0-201-53082-8", Name = "Book 20", Author = "Author T", Location = "Aisle 1", Price = 18.00, Quantity = 0 }
-            };
+            }; */
 
+            allBooks = DatabaseHelper.GetAllBooks();
             RefreshGrids();
         }
 
@@ -177,6 +180,11 @@ namespace BookstoreInventory
                 return OutOfStockGrid;
             }
             throw new InvalidOperationException("No tab is selected!");
+        }
+        public void UpdateUserNameAndRole(User user)
+        {
+            NameTextBlock.Text = user.Name;  // Change the user name text
+            UserRoleTextBlock.Text = user.Role;  // Change the user role text
         }
     }
 }
