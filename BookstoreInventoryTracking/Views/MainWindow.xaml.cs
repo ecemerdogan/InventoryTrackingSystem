@@ -4,9 +4,11 @@ using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using BookstoreInventoryTracking.Models;
 using BookstoreInventoryTracking.Helpers;
+using System.IO;
 
 namespace BookstoreInventoryTracking
 {
+    
     public partial class MainWindow : Window
     {
         public static bool IsLoggedIn { get; set; } = false; // Giriş durumunu takip etmek için

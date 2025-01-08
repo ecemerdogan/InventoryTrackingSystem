@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OjJ4CP7wOM+kWPK0nv2+sLTIMCAgMf3NXhRqNz7pKvoevBg5Aq96BGDeY9VOkRt9pMco5WUSTAf1BagZVaYQKQ==",
+  "dgSpecHash": "hDb6OFSIurI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\omerf\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
+  "projectFilePath": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\OOP Project\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\omerf\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
-    "C:\\Users\\omerf\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\omerf\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\omerf\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512"
+    "C:\\Users\\hkn-t\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\hkn-t\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\hkn-t\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\hkn-t\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512"
   ],
   "logs": []
 }

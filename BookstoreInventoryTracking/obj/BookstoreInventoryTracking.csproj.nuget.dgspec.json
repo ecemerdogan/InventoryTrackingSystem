@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omerf\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj": {}
+    "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\OOP Project\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omerf\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj": {
+    "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\OOP Project\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omerf\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
+        "projectUniqueName": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\OOP Project\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
         "projectName": "BookstoreInventoryTracking",
-        "projectPath": "C:\\Users\\omerf\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
-        "packagesPath": "C:\\Users\\omerf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omerf\\Desktop\\InventoryTrackingSystem\\BookstoreInventoryTracking\\obj\\",
+        "projectPath": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\OOP Project\\InventoryTrackingSystem\\BookstoreInventoryTracking\\BookstoreInventoryTracking.csproj",
+        "packagesPath": "C:\\Users\\hkn-t\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hkn-t\\OneDrive\\Masaüstü\\OOP Project\\InventoryTrackingSystem\\BookstoreInventoryTracking\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\omerf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hkn-t\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -38,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -72,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\add.png" />
+    <None Remove="Icons\delete.png" />
+    <None Remove="Icons\edit.png" />
+    <None Remove="Images\bookstore.jpg" />
+    <None Remove="Images\user-profile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <XamlRuntime>Wpf</XamlRuntime>
@@ -17,12 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Npgsql" Version="9.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
-    <PackageReference Include="Npgsql" Version="9.0.2" />
+    <Resource Include="Icons\add.png" />
+    <Resource Include="Icons\delete.png" />
+    <Resource Include="Icons\edit.png" />
+    <Resource Include="Images\bookstore.jpg" />
+    <Resource Include="Images\user-profile.png" />
   </ItemGroup>
 
 </Project>
