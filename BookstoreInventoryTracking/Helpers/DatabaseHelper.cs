@@ -147,5 +147,7 @@ namespace BookstoreInventoryTracking.Helpers
             }
             return new User(userName, name, role);
         }
+
+
     }
 }

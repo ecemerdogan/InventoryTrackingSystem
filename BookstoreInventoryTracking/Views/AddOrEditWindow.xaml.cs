@@ -9,11 +9,6 @@ namespace BookstoreInventoryTracking
     {
         public Book NewBook { get; private set; }
 
-        public AddItemWindow()
-        {
-            InitializeComponent();
-        }
-
         public AddItemWindow(Book bookToEdit = null)
         {
             InitializeComponent();

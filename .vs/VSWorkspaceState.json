@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BookstoreInventoryTracking"
+    "\\BookstoreInventoryTracking",
+    "\\BookstoreInventoryTracking\\Views"
   ],
-  "SelectedNode": "\\BookstoreInventoryTracking\\App.xaml",
+  "SelectedNode": "\\BookstoreInventoryTracking\\Views\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

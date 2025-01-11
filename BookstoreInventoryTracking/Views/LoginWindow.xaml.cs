@@ -28,6 +28,12 @@ namespace BookstoreInventoryTracking
 
             if (DatabaseHelper.ValidateUser(userName, password))
             {
+                // Kullanıcı bilgilerini veritabanından çek
+                User userInfo = DatabaseHelper.GetUserInfo(userName);
+
+                // Oturum açmış kullanıcıyı kaydet
+                UserSession.CurrentUsername = userInfo.UserName;
+                MessageBox.Show($"Welcome, {userInfo.Name}!", "Login Successful", MessageBoxButton.OK, MessageBoxImage.Information);
                 MainWindow.IsLoggedIn = true; // Successful Login
                 MainWindow mainWindow = new MainWindow(); // Form Main Window
                 mainWindow.UpdateUserNameAndRole(DatabaseHelper.GetUserInfo(userName));

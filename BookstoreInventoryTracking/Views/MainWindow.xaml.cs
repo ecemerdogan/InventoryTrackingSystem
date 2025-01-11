@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using BookstoreInventoryTracking.Models;
 using BookstoreInventoryTracking.Helpers;
 using System.IO;
+using BookstoreInventoryTracking.Views;
 
 namespace BookstoreInventoryTracking
 {
@@ -124,6 +125,38 @@ namespace BookstoreInventoryTracking
                 MessageBox.Show("Please select a book to delete.");
             }
         }
+        private string GetCurrentUserRole()
+        {
+            // Oturum açmış kullanıcının adını al
+            string username = UserSession.CurrentUsername;
+
+            // Kullanıcı bilgilerini veritabanından çek
+            User user = DatabaseHelper.GetUserInfo(username);
+
+            // Kullanıcı rolünü döndür
+            return user.Role;
+        }
+
+
+        private void BtnAddUser_Click(object sender, RoutedEventArgs e)
+        {
+            // Kullanıcının rolünü kontrol edin
+            string userRole = GetCurrentUserRole(); // Bu fonksiyon kullanıcı rolünü döndürmelidir.
+            if (userRole.ToLower() == "admin")
+            {
+                // Yeni kullanıcı ekleme penceresini aç
+                AddUserWindow addUserWindow = new AddUserWindow();
+                addUserWindow.ShowDialog(); // Modal pencere olarak aç
+            }
+            else
+            {
+                // Yetkisiz kullanıcı için hata mesajı göster
+                MessageBox.Show("You do not have the required permissions to add a user.", "Access Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        
+
 
         // Tabloyu dolduracak örnek veri
         private void LoadInventoryData()

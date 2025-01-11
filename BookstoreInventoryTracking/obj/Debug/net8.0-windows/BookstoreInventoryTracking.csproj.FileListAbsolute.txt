@@ -126,3 +126,12 @@ C:\Users\hkn-t\OneDrive\Masaüstü\OOP Project\InventoryTrackingSystem\Bookstore
 C:\Users\hkn-t\OneDrive\Masaüstü\OOP Project\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.pdb
 C:\Users\hkn-t\OneDrive\Masaüstü\OOP Project\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.genruntimeconfig.cache
 C:\Users\hkn-t\OneDrive\Masaüstü\OOP Project\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\ref\BookstoreInventoryTracking.dll
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.csproj.AssemblyReference.cache
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Bookstor.999612D4.Up2Date
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.g.cs
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking_MarkupCompile.lref
+C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.baml
