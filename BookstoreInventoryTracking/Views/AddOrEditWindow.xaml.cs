@@ -32,7 +32,7 @@ namespace BookstoreInventoryTracking.Views
         {
             try
             {
-                if (AreTextBoxesFilled())
+                if (!AreTextBoxesFilled())
                 {
                     MessageBox.Show("All fields are required. Please complete them before saving.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
