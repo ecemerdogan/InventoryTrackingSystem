@@ -7,12 +7,8 @@ namespace BookstoreInventoryTracking.Views
     /// <summary>
     /// AddUserWindow.xaml etkileşim mantığı
     /// </summary>
-    public partial class AddUserWindow : Window
+    public partial class AddUserWindow
     {
-        public string UserName { get; private set; }
-        public new string Name { get; private set; }
-        public string Password { get; private set; }
-
         public AddUserWindow()
         {
             InitializeComponent();
@@ -41,7 +37,7 @@ namespace BookstoreInventoryTracking.Views
                 string role = AdminRadioButton.IsChecked == true ? "Admin" : "Mod";
 
                 // Başarılı bir şekilde kaydedildiğini bildir ve pencereyi kapat
-                DialogResult = DatabaseHelper.InsertUser(new User(UserName = UserIdTextBox.Text, Password = DatabaseHelper.Encrypt(PasswordBox.Password), Name = NameTextBox.Text, role));
+                DialogResult = DatabaseHelper.InsertUser(new User(UserIdTextBox.Text, DatabaseHelper.Encrypt(PasswordBox.Password), NameTextBox.Text, role));
             }
             catch (Exception ex)
             {

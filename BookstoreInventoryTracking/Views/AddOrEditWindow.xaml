@@ -21,7 +21,7 @@
 
         <!-- Input Alanları -->
         <TextBlock Text="ISBN:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
-        <TextBox x:Name="ISBNTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+        <TextBox x:Name="IsbnTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
 
         <TextBlock Text="Name:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <TextBox x:Name="NameTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
@@ -42,7 +42,7 @@
 
 
         <!-- Kaydet ve İptal Butonları -->
-        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <Button Content="Save" Width="75" Margin="5" Click="SaveButton_Click"/>
             <Button Content="Cancel" Width="75" Margin="5" Click="CancelButton_Click"/>
         </StackPanel>

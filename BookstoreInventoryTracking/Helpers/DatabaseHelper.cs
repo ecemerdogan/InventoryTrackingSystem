@@ -180,6 +180,7 @@ namespace BookstoreInventoryTracking.Helpers
         {
             return BCrypt.Net.BCrypt.HashPassword(text);
         }
+        
         public static string GetStringSafe(this IDataRecord reader, string columnName)
         {
             return reader[columnName] != DBNull.Value ? reader[columnName].ToString() : string.Empty;

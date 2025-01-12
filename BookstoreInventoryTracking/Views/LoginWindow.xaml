@@ -36,7 +36,7 @@
                                FontSize="14"
                                Margin="0,0,0,0" />
                 </Border>
-                <TextBox Name="txtUserId" Height="20" Width="200" VerticalContentAlignment="Center" />
+                <TextBox Name="TxtUserId" Height="20" Width="200" VerticalContentAlignment="Center" />
 
                 <!-- Password Section -->
                 <Border Background="LightGray" CornerRadius="1" Padding="2" Height="20" Width="200">
@@ -45,13 +45,13 @@
                                FontSize="14"
                                Margin="0,0,0,0" />
                 </Border>
-                <PasswordBox Name="txtPassword"
+                <PasswordBox Name="TxtPassword"
                      Width="200"
                      Height="20"
                      VerticalContentAlignment="Center"
                      KeyDown="TxtPassword_KeyDown" />
                 <!-- Login Button -->
-                <Button Name="btnLogin"
+                <Button Name="BtnLogin"
                     Content="Login"
                     Height="20"
                     Width="100"

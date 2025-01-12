@@ -16,19 +16,19 @@ namespace BookstoreInventoryTracking.Models
             }
         }
 
-        public string ISBN { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public string Author { get; set; } = string.Empty;
-        public string Location { get; set; } = string.Empty;
-        public double Price { get; set; } = 0.0;
-        public int Quantity { get; set; } = 0;
+        public string ISBN = string.Empty;
+        public string Name = string.Empty;
+        public string Author = string.Empty;
+        public string Location = string.Empty;
+        public double Price = 0.0;
+        public int Quantity = 0;
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
 
         protected void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

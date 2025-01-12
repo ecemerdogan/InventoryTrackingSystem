@@ -1,14 +1,11 @@
-﻿using BookstoreInventoryTracking.Models;
-using System.Collections.ObjectModel;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using BookstoreInventoryTracking.Helpers;
 
 namespace BookstoreInventoryTracking.Views
 {
-    public partial class LoginWindow : Window
+    public partial class LoginWindow
     {
-        private ObservableCollection<User> allUsers = [];
         public LoginWindow()
         {
             InitializeComponent();
@@ -23,8 +20,8 @@ namespace BookstoreInventoryTracking.Views
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string userName = txtUserId.Text;
-            string password = txtPassword.Password;
+            string userName = TxtUserId.Text;
+            string password = TxtPassword.Password;
 
             if (DatabaseHelper.ValidateUser(userName, password))
             {
@@ -42,18 +39,5 @@ namespace BookstoreInventoryTracking.Views
                 MessageBox.Show("Invalid User ID or Password. Please try again.", "Login Failed");
             }
         }
-
-        // private bool ValidateUser(string userId, string password)
-        // {
-        //     // Validation of the user.
-        //     allUsers = new ObservableCollection<User> 
-        //     {
-        //         new User{UserId = "admin", Password = "password123" },
-        //         new User{UserId = "user1", Password = "password456" },
-        //         new User{UserId = "user2", Password = "password789"}
-        //     };
-        //
-        //     return allUsers.Any(u => u.UserId == userId && u.Password == password);
-        // }
     }
 }
