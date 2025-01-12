@@ -16,7 +16,7 @@ namespace BookstoreInventoryTracking.Views
 
             if (bookToEdit != null)
             {
-                IsbnTextBox.Text = bookToEdit.ISBN;
+                IsbnTextBox.Text = bookToEdit.Isbn;
                 NameTextBox.Text = bookToEdit.Name;
                 AuthorTextBox.Text = bookToEdit.Author;
                 LocationTextBox.Text = bookToEdit.Location;
@@ -39,7 +39,7 @@ namespace BookstoreInventoryTracking.Views
                 }
                 NewBook = new Book
                 {
-                    ISBN = IsbnTextBox.Text,
+                    Isbn = IsbnTextBox.Text,
                     Name = NameTextBox.Text,
                     Author = AuthorTextBox.Text,
                     Location = LocationTextBox.Text,

@@ -20,7 +20,7 @@ namespace BookstoreInventoryTracking.Helpers
 
                 using (var command = new NpgsqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("isbn", book.ISBN);
+                    command.Parameters.AddWithValue("isbn", book.Isbn);
                     command.Parameters.AddWithValue("name", book.Name);
                     command.Parameters.AddWithValue("author", book.Author);
                     command.Parameters.AddWithValue("location", book.Location);
@@ -48,7 +48,7 @@ namespace BookstoreInventoryTracking.Helpers
                         {
                             var book = new Book
                             {
-                                ISBN = reader.GetStringSafe("ISBN"),
+                                Isbn = reader.GetStringSafe("ISBN"),
                                 Name = reader.GetStringSafe("Name"),
                                 Author = reader.GetStringSafe("Author"),
                                 Location = reader.GetStringSafe("Location"),
@@ -74,7 +74,7 @@ namespace BookstoreInventoryTracking.Helpers
 
                 using (var command = new NpgsqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("isbn", book.ISBN);
+                    command.Parameters.AddWithValue("isbn", book.Isbn);
                     command.Parameters.AddWithValue("name", book.Name);
                     command.Parameters.AddWithValue("author", book.Author);
                     command.Parameters.AddWithValue("location", book.Location);

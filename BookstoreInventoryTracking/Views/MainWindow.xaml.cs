@@ -40,7 +40,7 @@ namespace BookstoreInventoryTracking.Views
                     .Where(book => book.Quantity > 0 &&
                                    (book.Name.ToLower().Contains(searchText) ||
                                     book.Author.ToLower().Contains(searchText) ||
-                                    book.ISBN.ToLower().Contains(searchText)))
+                                    book.Isbn.ToLower().Contains(searchText)))
                     .ToList();
             }
             else if (InventoryTabControl.SelectedIndex == 1) // "Out of Stock" sekmesi
@@ -49,7 +49,7 @@ namespace BookstoreInventoryTracking.Views
                     .Where(book => book.Quantity == 0 &&
                                    (book.Name.ToLower().Contains(searchText) ||
                                     book.Author.ToLower().Contains(searchText) ||
-                                    book.ISBN.ToLower().Contains(searchText)))
+                                    book.Isbn.ToLower().Contains(searchText)))
                     .ToList();
             }
         }
@@ -118,7 +118,7 @@ namespace BookstoreInventoryTracking.Views
                 string deletedBooks = "";
                 foreach (var book in selectedBooks)
                 {
-                    DatabaseHelper.DeleteBook(book.ISBN);
+                    DatabaseHelper.DeleteBook(book.Isbn);
                     deletedBooks = book.Name + ", " + deletedBooks;
                 }
                 MessageBox.Show(deletedBooks + " are deleted!!");

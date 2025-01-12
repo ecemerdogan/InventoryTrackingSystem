@@ -16,7 +16,7 @@ namespace BookstoreInventoryTracking.Models
             }
         }
 
-        public string ISBN = string.Empty;
+        public string Isbn = string.Empty;
         public string Name = string.Empty;
         public string Author = string.Empty;
         public string Location = string.Empty;
