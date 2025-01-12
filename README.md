@@ -21,7 +21,7 @@ The Inventory Tracking System is a C# and .NET-based application developed withi
 
 Clone the Repository:
 ```
-git clone https://github.com/your-repo/inventory-tracking-system.git
+git clone https://github.com/ecemerdogan/InventoryTrackingSystem.git
 ```
 
 Navigate to the Project Directory:
