@@ -10,8 +10,10 @@ The Inventory Tracking System is a C# and .NET-based application developed withi
 ***Framework:*** .NET Core
 
 ***Database:*** PostgreSQL (AWS RDS)
+> PostgreSQL database server is set up using AWS RDS. All data is stored in the server.
 
 ***UI Framework:*** Windows Presentation Foundation (WPF)
+> WPF (Windows Presentation Foundation) is chosen for the inventory tracking system because it offers a robust and modern framework for building desktop applications within the .NET ecosystem.
 
 ***Version Control:*** Git
 
@@ -24,17 +26,17 @@ git clone https://github.com/your-repo/inventory-tracking-system.git
 
 Navigate to the Project Directory:
 ```
-cd inventory-tracking-system
+cd InventoryTrackingSystem\BookstoreInventoryTracking
+```
+or
+```
+cd InventoryTrackingSystem/BookstoreInventoryTracking
 ```
 
 Install Dependencies:
 ```
 dotnet restore
 ```
-
-Configure the Database:
-
-> Update connection strings in appsettings.json.
 
 Run the Application:
 ```
@@ -43,8 +45,9 @@ dotnet run
 
 Accounts:
 ```
-admin: password123
-user1: password456
-user2: password789
+admin: password123 (Admin)
+user1: password456 (Mod)
+user2: password789 (Mod)
 ```
+Choose one of the given account information to log in to the Inventory Tracking System. If you choose the "admin" role as entrance information, in addition to the all properties that other users have you will have a chance to add a new user to the system.
 
