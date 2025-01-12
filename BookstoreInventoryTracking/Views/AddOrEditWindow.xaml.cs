@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
@@ -5,11 +6,11 @@ using BookstoreInventoryTracking.Models;
 
 namespace BookstoreInventoryTracking.Views
 {
-    public partial class AddItemWindow : Window
+    public partial class AddItemWindow
     {
         public Book NewBook { get; private set; }
 
-        public AddItemWindow(Book bookToEdit = null)
+        public AddItemWindow(Book? bookToEdit = null)
         {
             InitializeComponent();
 
@@ -19,7 +20,7 @@ namespace BookstoreInventoryTracking.Views
                 NameTextBox.Text = bookToEdit.Name;
                 AuthorTextBox.Text = bookToEdit.Author;
                 LocationTextBox.Text = bookToEdit.Location;
-                PriceTextBox.Text = bookToEdit.Price.ToString();
+                PriceTextBox.Text = bookToEdit.Price.ToString(CultureInfo.InvariantCulture);
                 QuantityTextBox.Text = bookToEdit.Quantity.ToString();
 
                 // ISBN alanını sadece okunabilir yap
@@ -31,12 +32,7 @@ namespace BookstoreInventoryTracking.Views
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(ISBNTextBox.Text) ||
-                    string.IsNullOrWhiteSpace(NameTextBox.Text) ||
-                    string.IsNullOrWhiteSpace(AuthorTextBox.Text) ||
-                    string.IsNullOrWhiteSpace(LocationTextBox.Text) ||
-                    string.IsNullOrWhiteSpace(PriceTextBox.Text) ||
-                    string.IsNullOrWhiteSpace(QuantityTextBox.Text))
+                if (AreTextBoxesFilled())
                 {
                     MessageBox.Show("All fields are required. Please complete them before saving.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;

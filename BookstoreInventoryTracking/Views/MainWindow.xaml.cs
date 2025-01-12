@@ -8,11 +8,11 @@ using BookstoreInventoryTracking.Helpers;
 namespace BookstoreInventoryTracking.Views
 {
     
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        public static bool IsLoggedIn { get; set; } = false; // Giriş durumunu takip etmek için
+        public static bool IsLoggedIn = false; // Giriş durumunu takip etmek için
 
-        private ObservableCollection<Book> allBooks = []; // Tüm ürünlerin listesi
+        private ObservableCollection<Book> _allBooks = []; // Tüm ürünlerin listesi
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace BookstoreInventoryTracking.Views
             LoadInventoryData(); // Tabloyu veriyle doldurmak için bir metot çağrısı
         }
 
-        private void SearchBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchText = SearchBox.Text.ToLower();
 
@@ -36,7 +36,7 @@ namespace BookstoreInventoryTracking.Views
 
             if (InventoryTabControl.SelectedIndex == 0) // "In Stock" sekmesi
             {
-                InventoryGrid.ItemsSource = allBooks
+                InventoryGrid.ItemsSource = _allBooks
                     .Where(book => book.Quantity > 0 &&
                                    (book.Name.ToLower().Contains(searchText) ||
                                     book.Author.ToLower().Contains(searchText) ||
@@ -45,7 +45,7 @@ namespace BookstoreInventoryTracking.Views
             }
             else if (InventoryTabControl.SelectedIndex == 1) // "Out of Stock" sekmesi
             {
-                OutOfStockGrid.ItemsSource = allBooks
+                OutOfStockGrid.ItemsSource = _allBooks
                     .Where(book => book.Quantity == 0 &&
                                    (book.Name.ToLower().Contains(searchText) ||
                                     book.Author.ToLower().Contains(searchText) ||
@@ -68,17 +68,17 @@ namespace BookstoreInventoryTracking.Views
         // "Edit" butonuna tıklandığında
         private void BtnEditAnItem_Click(object sender, RoutedEventArgs e)
         {
-            DataGrid SelectedGrid = GetSelectedDataGrid();
+            DataGrid selectedGrid = GetSelectedDataGrid();
 
-            var SelectedBooks = SelectedGrid.Items
+            var selectedBooks = selectedGrid.Items
                 .OfType<Book>()
                 .Where(book => book.IsSelected)
                 .ToList();
 
             // Seçili kitap sayısını kontrol et
-            if (SelectedBooks.Count == 1)
+            if (selectedBooks.Count == 1)
             {
-                var selectedBook = SelectedBooks.First();
+                var selectedBook = selectedBooks.First();
                 var editWindow = new AddItemWindow(selectedBook);
 
                 if (editWindow.ShowDialog() == true)
@@ -87,7 +87,7 @@ namespace BookstoreInventoryTracking.Views
                     LoadInventoryData();
                 }
             }
-            else if (SelectedBooks.Count > 1)
+            else if (selectedBooks.Count > 1)
             {
                 MessageBox.Show("Please select only one book to edit.");
             }
@@ -100,17 +100,17 @@ namespace BookstoreInventoryTracking.Views
         // "Delete" butonuna tıklandığında
         private void BtnDeleteAnItem_Click(object sender, RoutedEventArgs e)
         {
-            DataGrid SelectedGrid = GetSelectedDataGrid();
+            DataGrid selectedGrid = GetSelectedDataGrid();
 
-            var SelectedBooks = SelectedGrid.Items
+            var selectedBooks = selectedGrid.Items
                 .OfType<Book>()
                 .Where(book => book.IsSelected)
                 .ToList();
 
-            if (SelectedBooks.Count > 0)
+            if (selectedBooks.Count > 0)
             {
                 string deletedBooks = "";
-                foreach (var book in SelectedBooks)
+                foreach (var book in selectedBooks)
                 {
                     DatabaseHelper.DeleteBook(book.ISBN);
                     deletedBooks = book.Name + ", " + deletedBooks;
@@ -170,25 +170,16 @@ namespace BookstoreInventoryTracking.Views
                 new Book { ISBN = "978-0-201-53082-8", Name = "Book 20", Author = "Author T", Location = "Aisle 1", Price = 18.00, Quantity = 0 }
             }; */
 
-            allBooks = DatabaseHelper.GetAllBooks();
+            _allBooks = DatabaseHelper.GetAllBooks();
             RefreshGrids();
         }
 
         private void RefreshGrids()
         {
-            InventoryGrid.ItemsSource = allBooks.Where(book => book.Quantity > 0).ToList();
-            OutOfStockGrid.ItemsSource = allBooks.Where(book => book.Quantity == 0).ToList();
+            InventoryGrid.ItemsSource = _allBooks.Where(book => book.Quantity > 0).ToList();
+            OutOfStockGrid.ItemsSource = _allBooks.Where(book => book.Quantity == 0).ToList();
         }
-
-        private void BtnRaiseItem_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Raise button clicked!");
-        }
-
-        private void BtnClc_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Clear button clicked!");
-        }
+        
         private DataGrid GetSelectedDataGrid()
         {
             if (InventoryTabControl.SelectedIndex == 0) // "In Stock" sekmesi

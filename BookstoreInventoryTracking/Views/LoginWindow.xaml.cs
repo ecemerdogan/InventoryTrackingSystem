@@ -1,14 +1,11 @@
-﻿using BookstoreInventoryTracking.Models;
-using System.Collections.ObjectModel;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using BookstoreInventoryTracking.Helpers;
 
 namespace BookstoreInventoryTracking.Views
 {
-    public partial class LoginWindow : Window
+    public partial class LoginWindow
     {
-        private ObservableCollection<User> allUsers = [];
         public LoginWindow()
         {
             InitializeComponent();
