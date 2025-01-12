@@ -28,10 +28,6 @@ Navigate to the Project Directory:
 ```
 cd InventoryTrackingSystem\BookstoreInventoryTracking
 ```
-or
-```
-cd InventoryTrackingSystem/BookstoreInventoryTracking
-```
 
 Install Dependencies:
 ```
