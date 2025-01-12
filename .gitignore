@@ -33,6 +33,7 @@ packages/*
 # Visual Studio Code
 .vscode/
 .history/
+.vs/
 
 # Build Results
 [Dd]ebug/
