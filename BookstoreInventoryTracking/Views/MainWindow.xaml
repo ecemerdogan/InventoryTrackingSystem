@@ -91,7 +91,7 @@
                     <DataGrid Name="InventoryGrid" AutoGenerateColumns="False" Margin="0,10,0,0" SelectionMode="Extended" IsReadOnly="False" CanUserAddRows="False">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Header="Select"  Binding="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50" />
-                            <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="ISBN" Binding="{Binding Isbn}" Width="*" IsReadOnly="True"/>
                             <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
                             <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="*" IsReadOnly="True"/>
                             <DataGridTextColumn Header="Location" Binding="{Binding Location}" Width="*" IsReadOnly="True"/>
@@ -104,7 +104,7 @@
                     <DataGrid Name="OutOfStockGrid" AutoGenerateColumns="False" Margin="0,10,0,0" SelectionMode="Extended" IsReadOnly="False" CanUserAddRows="False">
                         <DataGrid.Columns>
                             <DataGridCheckBoxColumn Header="Select"  Binding="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
-                            <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="ISBN" Binding="{Binding Isbn}" Width="*" IsReadOnly="True"/>
                             <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
                             <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="*" IsReadOnly="True"/>
                             <DataGridTextColumn Header="Location" Binding="{Binding Location}" Width="*" IsReadOnly="True"/>
