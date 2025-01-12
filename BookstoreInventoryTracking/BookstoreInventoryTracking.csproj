@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icons\favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,6 +40,8 @@
     <None Include="Icons\add_user.png.old" />
     <None Remove="Icons\user_add.png" />
     <Resource Include="Icons\user_add.png" />
+    <None Remove="Icons\favicon.ico" />
+    <Resource Include="Icons\favicon.ico" />
   </ItemGroup>
 
 </Project>

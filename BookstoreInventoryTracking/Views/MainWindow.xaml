@@ -4,17 +4,14 @@
         Title="Bookstore Inventory" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen" Background="#f9f9f9">
     <Grid>
-        <!-- Ana Bölme: Sol ve Sağ -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
-            <!-- Sol Menü -->
             <ColumnDefinition Width="*"/>
-            <!-- İçerik Alanı -->
         </Grid.ColumnDefinitions>
 
-        <!-- Sol Menü -->
+        <!-- Left Menu -->
         <StackPanel Background="#2C3E50" Grid.Column="0" VerticalAlignment="Stretch">
-            <!-- Kullanıcı Profili -->
+            <!-- User Profile -->
             <StackPanel Margin="10" HorizontalAlignment="Center">
                 <Border Width="80" Height="80" CornerRadius="40" BorderBrush="#ecf0f1" BorderThickness="2" Margin="0,20">
                     <Image Source="\Images\user-profile.png" Stretch="Fill"/>
@@ -23,23 +20,22 @@
                 <TextBlock x:Name="UserRoleTextBlock" Text="Admin" FontSize="12" Foreground="#bdc3c7" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <!-- Menü Butonları -->
+            <!-- Menu Buttons -->
             <StackPanel Margin="10,30,10,0" VerticalAlignment="Top"/>
         </StackPanel>
 
-        <!-- İçerik Alanı -->
+        <!-- Content -->
         <Grid Grid.Column="1" Margin="10,0,10,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Üst Panel -->
             <DockPanel>
-                <!-- Başlık -->
+                <!-- Header -->
                 <TextBlock Text="Bookstore Inventory" FontSize="18" FontWeight="Bold" DockPanel.Dock="Left" VerticalAlignment="Center" RenderTransformOrigin="0.389,0.594"/>
 
-                <!-- Butonlar -->
+                <!-- Buttons -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Right" Margin="10,0,0,0">
                     <Button Margin="0,0,15,0" Background="Transparent" Foreground="Black" BorderBrush="Transparent" Height="60" Click="BtnAddNewItem_Click">
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
@@ -67,18 +63,16 @@
                     </Button>
                 </StackPanel>
 
-                <!-- Arama Çubuğu -->
-                <TextBox Name="SearchBox" Width="169" Height="30" Margin="0,0,10,0" TextChanged="SearchBox_TextChanged">
+                
+<!-- Search Box -->
+                <TextBox Name="SearchBox" Width="169" Height="30" Margin="0,0,10,0" 
+                         TextChanged="SearchBox_TextChanged" 
+                         LostFocus="SearchBox_LostFocus" 
+                         GotFocus="SearchBox_GotFocus">
                     <TextBox.Style>
                         <Style TargetType="TextBox">
                             <Setter Property="Foreground" Value="Gray"/>
                             <Setter Property="Text" Value="Search..."/>
-                            <Style.Triggers>
-                                <Trigger Property="IsKeyboardFocused" Value="True">
-                                    <Setter Property="Text" Value=""/>
-                                    <Setter Property="Foreground" Value="Black"/>
-                                </Trigger>
-                            </Style.Triggers>
                         </Style>
                     </TextBox.Style>
                 </TextBox>

@@ -1,6 +1,8 @@
 ﻿using System.Windows;
 using System.Collections.ObjectModel;
+using System.DirectoryServices.ActiveDirectory;
 using System.Windows.Controls;
+using System.Windows.Media;
 using BookstoreInventoryTracking.Models;
 using BookstoreInventoryTracking.Helpers;
 
@@ -12,10 +14,12 @@ namespace BookstoreInventoryTracking.Views
         public static bool IsLoggedIn = false; // Tracks login status
 
         private ObservableCollection<Book> _allBooks = []; // Collection of all books in the inventory
+        private bool isAllComponentInitialized = false;
+        
         public MainWindow()
         {
             InitializeComponent();
-
+            isAllComponentInitialized = true;
             // Redirect to login page if user is not logged in
             if (!IsLoggedIn)
             {
@@ -24,18 +28,25 @@ namespace BookstoreInventoryTracking.Views
                 loginWindow.Show();
                 this.Close(); // Close the main window
             }
-
             LoadInventoryData(); // Load data into the table
         }
 
         // Handles text changes in the search box
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            // Do not filter if the text is empty or "Search..."
+            if (string.IsNullOrWhiteSpace(SearchBox.Text) || SearchBox.Text == "Search...")
+            {
+                // Show all items by default
+                RefreshGrids();
+                return;
+            }
+
             string searchText = SearchBox.Text.ToLower(); // Convert search text to lowercase
 
-            if (InventoryTabControl == null) return; // Check for null to avoid errors
+            if (InventoryTabControl == null) return; // Check to avoid errors
 
-            // Filter items for the "In Stock" tab
+            // Perform filtering
             if (InventoryTabControl.SelectedIndex == 0)
             {
                 InventoryGrid.ItemsSource = _allBooks
@@ -45,7 +56,6 @@ namespace BookstoreInventoryTracking.Views
                                     book.Isbn.ToLower().Contains(searchText)))
                     .ToList();
             }
-            // Filter items for the "Out of Stock" tab
             else if (InventoryTabControl.SelectedIndex == 1)
             {
                 OutOfStockGrid.ItemsSource = _allBooks
@@ -55,6 +65,32 @@ namespace BookstoreInventoryTracking.Views
                                     book.Isbn.ToLower().Contains(searchText)))
                     .ToList();
             }
+        }
+
+        private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SearchBox.Text))
+            {
+                SearchBox.Text = "Search...";
+                SearchBox.Foreground = Brushes.Gray;
+                
+                RefreshGrids();
+            }
+        }
+
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (SearchBox.Text == "Search...")
+            {
+                SearchBox.Text = "";
+                SearchBox.Foreground = Brushes.Black;
+            }
+        }
+
+        private void ResetSearchBox()
+        {
+            SearchBox.Text = "Search...";
+            SearchBox.Foreground = Brushes.Gray;
         }
 
         // Event handler for the "Add" button click to add a new item
@@ -155,14 +191,24 @@ namespace BookstoreInventoryTracking.Views
         private void LoadInventoryData()
         {
             _allBooks = DatabaseHelper.GetAllBooks(); // Fetch all books
-            RefreshGrids(); // Refresh the data grids
+            
+            if (_allBooks != null)
+                RefreshGrids(true); // Refresh the data grids
         }
 
         // Refresh the grids for in-stock and out-of-stock items
-        private void RefreshGrids()
+        private void RefreshGrids(bool willSearchBoxReset = false)
         {
-            InventoryGrid.ItemsSource = _allBooks.Where(book => book.Quantity > 0).ToList();
-            OutOfStockGrid.ItemsSource = _allBooks.Where(book => book.Quantity == 0).ToList();
+            if (isAllComponentInitialized)
+            {
+                InventoryGrid.ItemsSource = _allBooks.Where(book => book.Quantity > 0).ToList();
+                OutOfStockGrid.ItemsSource = _allBooks.Where(book => book.Quantity == 0).ToList();
+            }
+
+            if (willSearchBoxReset)
+            {
+                ResetSearchBox();
+            }
         }
 
         // Get the currently selected data grid based on the active tab
@@ -171,8 +217,10 @@ namespace BookstoreInventoryTracking.Views
             switch (InventoryTabControl.SelectedIndex)
             {
                 case 0:
+                    ResetSearchBox();
                     return InventoryGrid; // "In Stock" grid
                 case 1:
+                    ResetSearchBox();
                     return OutOfStockGrid; // "Out of Stock" grid
                 default:
                     throw new InvalidOperationException("No tab is selected!");

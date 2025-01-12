@@ -34,14 +34,14 @@
         <TextBox x:Name="NameTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
 
 
-        <!-- Checkbox Alanı -->
+        <!-- Checkbox Area -->
         <TextBlock Text="Role:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="5"/>
         <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="5">
             <RadioButton x:Name="AdminRadioButton" Content="Admin" GroupName="RoleGroup" Margin="5"/>
             <RadioButton x:Name="ModRadioButton" Content="Mod" GroupName="RoleGroup" Margin="5"/>
         </StackPanel>
 
-        <!-- Kaydet ve İptal Butonları -->
+        <!-- Save and Cancel Button -->
         <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Left" Margin="11,7,0,13" Grid.Column="1">
             <Button Content="Confirm" Width="75" Margin="5" Click="ConfirmButton_Click"/>
             <Button Content="Cancel" Width="75" Margin="5" Click="CancelButton_Click"/>
