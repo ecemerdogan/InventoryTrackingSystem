@@ -4,10 +4,8 @@ using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using BookstoreInventoryTracking.Models;
 using BookstoreInventoryTracking.Helpers;
-using System.IO;
-using BookstoreInventoryTracking.Views;
 
-namespace BookstoreInventoryTracking
+namespace BookstoreInventoryTracking.Views
 {
     
     public partial class MainWindow : Window
@@ -125,24 +123,11 @@ namespace BookstoreInventoryTracking
                 MessageBox.Show("Please select a book to delete.");
             }
         }
-        private string GetCurrentUserRole()
-        {
-            // Oturum açmış kullanıcının adını al
-            string username = UserSession.CurrentUsername;
-
-            // Kullanıcı bilgilerini veritabanından çek
-            User user = DatabaseHelper.GetUserInfo(username);
-
-            // Kullanıcı rolünü döndür
-            return user.Role;
-        }
-
 
         private void BtnAddUser_Click(object sender, RoutedEventArgs e)
         {
             // Kullanıcının rolünü kontrol edin
-            string userRole = GetCurrentUserRole(); // Bu fonksiyon kullanıcı rolünü döndürmelidir.
-            if (userRole.ToLower() == "admin")
+            if (UserSession.CurrentUser.Role.ToLower() == "admin")
             {
                 // Yeni kullanıcı ekleme penceresini aç
                 AddUserWindow addUserWindow = new AddUserWindow();

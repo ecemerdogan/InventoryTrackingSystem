@@ -135,3 +135,6 @@ C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Deb
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.g.cs
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking_MarkupCompile.lref
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.baml
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.g.cs
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking_MarkupCompile.lref
+C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.baml

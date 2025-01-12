@@ -1,19 +1,26 @@
-﻿using System.ComponentModel;
-using System.Security.Cryptography;
-
-namespace BookstoreInventoryTracking.Models
+﻿namespace BookstoreInventoryTracking.Models
 {
-    public class User : LoginWindow
+    public class User
     {
-        public string UserName { get; set; } = string.Empty;
+        public string UserId { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Role { get; set; } = string.Empty;
 
-        public User(string UserName, string Name, string Role)
+        public User(string userId, string name, string role)
         {
-            this.UserName = UserName;
-            this.Name = Name;
-            this.Role = Role;
+            UserId = userId;
+            Name = name;
+            Role = role;
+            Password = "";
+        }
+
+        public User(string userId, string password, string name, string role)
+        {
+            UserId = userId;
+            Password = password;
+            Name = name;
+            Role = role;
         }
             
     }

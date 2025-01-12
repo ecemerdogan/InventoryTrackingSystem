@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Data;
 using BookstoreInventoryTracking.Models;
 using Npgsql;
 
@@ -6,12 +7,12 @@ namespace BookstoreInventoryTracking.Helpers
 {
     public static class DatabaseHelper
     {
-        private static readonly string _connectionString =
+        private static readonly string ConnectionString =
             "Host=database-1.clcqga86m19q.eu-central-1.rds.amazonaws.com;Port=5432;Database=BookstoreInventory;Username=postgres;Password=M3hIRREHBYkdrhPJrKJR;";
 
         public static void InsertBook(Book book)
         {
-            using (var connection = new NpgsqlConnection(_connectionString))
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
                 string query =
@@ -34,7 +35,7 @@ namespace BookstoreInventoryTracking.Helpers
         {
             var books = new ObservableCollection<Book>();
 
-            using (var connection = new NpgsqlConnection(_connectionString))
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
                 string query = "SELECT * FROM Books";
@@ -47,10 +48,10 @@ namespace BookstoreInventoryTracking.Helpers
                         {
                             var book = new Book
                             {
-                                ISBN = reader["ISBN"].ToString(),
-                                Name = reader["Name"].ToString(),
-                                Author = reader["Author"].ToString(),
-                                Location = reader["Location"].ToString(),
+                                ISBN = reader.GetStringSafe("ISBN"),
+                                Name = reader.GetStringSafe("Name"),
+                                Author = reader.GetStringSafe("Author"),
+                                Location = reader.GetStringSafe("Location"),
                                 Price = Convert.ToDouble(reader["Price"]),
                                 Quantity = Convert.ToInt32(reader["Quantity"])
                             };
@@ -65,7 +66,7 @@ namespace BookstoreInventoryTracking.Helpers
 
         public static void UpdateBook(Book book)
         {
-            using (var connection = new NpgsqlConnection(_connectionString))
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
                 string query =
@@ -86,7 +87,7 @@ namespace BookstoreInventoryTracking.Helpers
 
         public static void DeleteBook(string isbn)
         {
-            using (var connection = new NpgsqlConnection(_connectionString))
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
                 string query = "DELETE FROM Books WHERE ISBN = @isbn";
@@ -100,15 +101,15 @@ namespace BookstoreInventoryTracking.Helpers
         }
 
         // Method to validate login
-        public static bool ValidateUser(string username, string password)
+        public static bool ValidateUser(string userId, string password)
         {
-            using (var connection = new NpgsqlConnection(_connectionString))
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
                 using (var command =
                        new NpgsqlCommand("SELECT password FROM users WHERE username = @username", connection))
                 {
-                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@username", userId);
                     var storedHashedPassword = command.ExecuteScalar() as string;
 
                     if (storedHashedPassword == null)
@@ -121,33 +122,67 @@ namespace BookstoreInventoryTracking.Helpers
             }
         }
 
-        public static User GetUserInfo(string username)
+        public static User GetUserInfo(string userId)
         {
-            string userName = string.Empty;
             string name = string.Empty;
             string role = string.Empty;
             
-            using (var connection = new NpgsqlConnection(_connectionString))
+            using (var connection = new NpgsqlConnection(ConnectionString))
             {
                 connection.Open();
                 using (var command =
                        new NpgsqlCommand("SELECT username, name, role FROM users WHERE username = @username",
                            connection))
                 {
-                    command.Parameters.AddWithValue("username", username);
+                    command.Parameters.AddWithValue("username", userId);
 
                     var reader = command.ExecuteReader();
                     if (reader.Read()) // Check if there is a result
                     {
-                        userName = reader["username"].ToString(); // Get the username
-                        name = reader["name"].ToString(); // Get the name
-                        role = reader["role"].ToString(); // Get the role
+                        name = reader.GetStringSafe("name");// Get the name
+                        role = reader.GetStringSafe("role"); // Get the role
                     }
                 }
             }
-            return new User(userName, name, role);
+            
+            return new User(userId, name, role);
         }
 
+        public static bool InsertUser(User newUser)
+        {
+            try
+            {
+                using (var connection = new NpgsqlConnection(ConnectionString))
+                {
+                    connection.Open();
+                    string query =
+                        "INSERT INTO Users (Username, Password, Name, Role) VALUES (@username, @password, @name, @role)";
 
+                    using (var command = new NpgsqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("username", newUser.UserId);
+                        command.Parameters.AddWithValue("password", newUser.Password);
+                        command.Parameters.AddWithValue("name", newUser.Name);
+                        command.Parameters.AddWithValue("role", newUser.Role);
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new InvalidOperationException("An error occurred while inserting the user.", e);
+            }
+        }
+
+        public static string Encrypt(string text)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(text);
+        }
+        public static string GetStringSafe(this IDataRecord reader, string columnName)
+        {
+            return reader[columnName] != DBNull.Value ? reader[columnName].ToString() : string.Empty;
+        }
     }
 }

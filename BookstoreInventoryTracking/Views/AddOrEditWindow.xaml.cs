@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using BookstoreInventoryTracking.Models;
 
-namespace BookstoreInventoryTracking
+namespace BookstoreInventoryTracking.Views
 {
     public partial class AddItemWindow : Window
     {

@@ -1,17 +1,6 @@
 ﻿using BookstoreInventoryTracking.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using BookstoreInventoryTracking.Helpers;
 
 namespace BookstoreInventoryTracking.Views
 {
@@ -20,7 +9,6 @@ namespace BookstoreInventoryTracking.Views
     /// </summary>
     public partial class AddUserWindow : Window
     {
-        public User NewUser { get; private set; }
         public string UserName { get; private set; }
         public new string Name { get; private set; }
         public string Password { get; private set; }
@@ -30,7 +18,7 @@ namespace BookstoreInventoryTracking.Views
             InitializeComponent();
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -43,20 +31,17 @@ namespace BookstoreInventoryTracking.Views
                 }
 
                 // Rol seçim kontrolü
-                if (AdminCheckBox.IsChecked == false && UserCheckBox.IsChecked == false)
+                if (AdminRadioButton.IsChecked == false && ModRadioButton.IsChecked == false)
                 {
-                    MessageBox.Show("Please select a role (Admin or User).", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Please select a role (Admin or Mod).", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
 
                 // Rolü belirle
-                string role = AdminCheckBox.IsChecked == true ? "admin" : "user";
-
-                // Kullanıcı nesnesini oluştur
-                NewUser = new User(UserName = UserIdTextBox.Text, Name = NameTextBox.Text, role);
+                string role = AdminRadioButton.IsChecked == true ? "Admin" : "Mod";
 
                 // Başarılı bir şekilde kaydedildiğini bildir ve pencereyi kapat
-                DialogResult = true;
+                DialogResult = DatabaseHelper.InsertUser(new User(UserName = UserIdTextBox.Text, Password = DatabaseHelper.Encrypt(PasswordBox.Password), Name = NameTextBox.Text, role));
             }
             catch (Exception ex)
             {
