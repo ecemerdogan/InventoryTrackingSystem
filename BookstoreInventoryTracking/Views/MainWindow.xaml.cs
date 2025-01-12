@@ -1,5 +1,4 @@
-﻿
-using System.Windows;
+﻿using System.Windows;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using BookstoreInventoryTracking.Models;
@@ -7,34 +6,37 @@ using BookstoreInventoryTracking.Helpers;
 
 namespace BookstoreInventoryTracking.Views
 {
-    
+    // Main window class for the Bookstore Inventory Tracking application
     public partial class MainWindow
     {
-        public static bool IsLoggedIn = false; // Giriş durumunu takip etmek için
+        public static bool IsLoggedIn = false; // Tracks login status
 
-        private ObservableCollection<Book> _allBooks = []; // Tüm ürünlerin listesi
+        private ObservableCollection<Book> _allBooks = []; // Collection of all books in the inventory
         public MainWindow()
         {
             InitializeComponent();
+
+            // Redirect to login page if user is not logged in
             if (!IsLoggedIn)
             {
                 MessageBox.Show("Unauthorized access detected. Redirecting to login page.");
                 var loginWindow = new LoginWindow();
                 loginWindow.Show();
-                this.Close(); // Ana pencereyi kapat
+                this.Close(); // Close the main window
             }
 
-            LoadInventoryData(); // Tabloyu veriyle doldurmak için bir metot çağrısı
+            LoadInventoryData(); // Load data into the table
         }
 
+        // Handles text changes in the search box
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            string searchText = SearchBox.Text.ToLower();
+            string searchText = SearchBox.Text.ToLower(); // Convert search text to lowercase
 
-            if (InventoryTabControl == null) return; // Null kontrolü
+            if (InventoryTabControl == null) return; // Check for null to avoid errors
 
-
-            if (InventoryTabControl.SelectedIndex == 0) // "In Stock" sekmesi
+            // Filter items for the "In Stock" tab
+            if (InventoryTabControl.SelectedIndex == 0)
             {
                 InventoryGrid.ItemsSource = _allBooks
                     .Where(book => book.Quantity > 0 &&
@@ -43,7 +45,8 @@ namespace BookstoreInventoryTracking.Views
                                     book.Isbn.ToLower().Contains(searchText)))
                     .ToList();
             }
-            else if (InventoryTabControl.SelectedIndex == 1) // "Out of Stock" sekmesi
+            // Filter items for the "Out of Stock" tab
+            else if (InventoryTabControl.SelectedIndex == 1)
             {
                 OutOfStockGrid.ItemsSource = _allBooks
                     .Where(book => book.Quantity == 0 &&
@@ -54,7 +57,7 @@ namespace BookstoreInventoryTracking.Views
             }
         }
 
-        // "Add" butonuna tıklandığında
+        // Event handler for the "Add" button click to add a new item
         private void BtnAddNewItem_Click(object sender, RoutedEventArgs e)
         {
             var addWindow = new AddItemWindow();
@@ -62,23 +65,23 @@ namespace BookstoreInventoryTracking.Views
             {
                 if (addWindow.NewBook != null)
                 {
-                    DatabaseHelper.InsertBook(addWindow.NewBook);
-                    LoadInventoryData();
+                    DatabaseHelper.InsertBook(addWindow.NewBook); // Add the new book to the database
+                    LoadInventoryData(); // Refresh the inventory data
                 }
             }
         }
 
-        // "Edit" butonuna tıklandığında
+        // Event handler for the "Edit" button click to edit an existing item
         private void BtnEditAnItem_Click(object sender, RoutedEventArgs e)
         {
-            DataGrid selectedGrid = GetSelectedDataGrid();
+            DataGrid selectedGrid = GetSelectedDataGrid(); // Get the active data grid
 
             var selectedBooks = selectedGrid.Items
                 .OfType<Book>()
-                .Where(book => book.IsSelected)
+                .Where(book => book.IsSelected) // Check for selected items
                 .ToList();
 
-            // Seçili kitap sayısını kontrol et
+            // Ensure only one book is selected for editing
             if (selectedBooks.Count == 1)
             {
                 var selectedBook = selectedBooks.First();
@@ -88,8 +91,8 @@ namespace BookstoreInventoryTracking.Views
                 {
                     if (editWindow.NewBook != null)
                     {
-                        DatabaseHelper.UpdateBook(editWindow.NewBook);
-                        LoadInventoryData();
+                        DatabaseHelper.UpdateBook(editWindow.NewBook); // Update book in the database
+                        LoadInventoryData(); // Refresh inventory data
                     }
                 }
             }
@@ -103,26 +106,27 @@ namespace BookstoreInventoryTracking.Views
             }
         }
 
-        // "Delete" butonuna tıklandığında
+        // Event handler for the "Delete" button click to remove selected items
         private void BtnDeleteAnItem_Click(object sender, RoutedEventArgs e)
         {
-            DataGrid selectedGrid = GetSelectedDataGrid();
+            DataGrid selectedGrid = GetSelectedDataGrid(); // Get the active data grid
 
             var selectedBooks = selectedGrid.Items
                 .OfType<Book>()
-                .Where(book => book.IsSelected)
+                .Where(book => book.IsSelected) // Check for selected items
                 .ToList();
 
+            // Delete selected books if any are selected
             if (selectedBooks.Count > 0)
             {
                 string deletedBooks = "";
                 foreach (var book in selectedBooks)
                 {
-                    DatabaseHelper.DeleteBook(book.Isbn);
+                    DatabaseHelper.DeleteBook(book.Isbn); // Delete book from database
                     deletedBooks = book.Name + ", " + deletedBooks;
                 }
                 MessageBox.Show(deletedBooks + " are deleted!!");
-                LoadInventoryData();
+                LoadInventoryData(); // Refresh inventory data
             }
             else
             {
@@ -130,54 +134,56 @@ namespace BookstoreInventoryTracking.Views
             }
         }
 
+        // Event handler for the "Add User" button click
         private void BtnAddUser_Click(object sender, RoutedEventArgs e)
         {
-            // Kullanıcının rolünü kontrol edin
+            // Check the user's role before allowing access
             if (UserSession.CurrentUser.Role.ToLower() == "admin")
             {
-                // Yeni kullanıcı ekleme penceresini aç
+                // Open the "Add User" window as a modal
                 AddUserWindow addUserWindow = new AddUserWindow();
-                addUserWindow.ShowDialog(); // Modal pencere olarak aç
+                addUserWindow.ShowDialog();
             }
             else
             {
-                // Yetkisiz kullanıcı için hata mesajı göster
+                // Display an error message for unauthorized users
                 MessageBox.Show("You do not have the required permissions to add a user.", "Access Denied", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
-        
-
-
-        // Tabloyu dolduracak örnek veri
+        // Load inventory data from the database
         private void LoadInventoryData()
         {
-            _allBooks = DatabaseHelper.GetAllBooks();
-            RefreshGrids();
+            _allBooks = DatabaseHelper.GetAllBooks(); // Fetch all books
+            RefreshGrids(); // Refresh the data grids
         }
 
+        // Refresh the grids for in-stock and out-of-stock items
         private void RefreshGrids()
         {
             InventoryGrid.ItemsSource = _allBooks.Where(book => book.Quantity > 0).ToList();
             OutOfStockGrid.ItemsSource = _allBooks.Where(book => book.Quantity == 0).ToList();
         }
-        
+
+        // Get the currently selected data grid based on the active tab
         private DataGrid GetSelectedDataGrid()
         {
             switch (InventoryTabControl.SelectedIndex)
             {
                 case 0:
-                    return InventoryGrid;
+                    return InventoryGrid; // "In Stock" grid
                 case 1:
-                    return OutOfStockGrid;
-                default: 
+                    return OutOfStockGrid; // "Out of Stock" grid
+                default:
                     throw new InvalidOperationException("No tab is selected!");
             }
         }
+
+        // Update the UI with the user's name and role
         public void UpdateUserNameAndRole(User user)
         {
-            NameTextBlock.Text = user.Name;  // Change the name text
-            UserRoleTextBlock.Text = user.Role;  // Change the user role text
+            NameTextBlock.Text = user.Name; // Update the displayed name
+            UserRoleTextBlock.Text = user.Role; // Update the displayed role
         }
     }
 }

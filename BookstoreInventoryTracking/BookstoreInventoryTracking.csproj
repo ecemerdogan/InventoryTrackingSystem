@@ -35,6 +35,10 @@
     <Resource Include="Icons\edit.png" />
     <Resource Include="Images\bookstore.jpg" />
     <Resource Include="Images\user-profile.png" />
+    <None Remove="Icons\add_user.png" />
+    <None Include="Icons\add_user.png.old" />
+    <None Remove="Icons\user_add.png" />
+    <Resource Include="Icons\user_add.png" />
   </ItemGroup>
 
 </Project>
