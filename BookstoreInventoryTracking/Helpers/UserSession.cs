@@ -4,6 +4,6 @@ namespace BookstoreInventoryTracking.Helpers
 {
     class UserSession
     {
-        public static User CurrentUser { get; set; }
+        public static User CurrentUser { get; set; } = new User();
     }
 }

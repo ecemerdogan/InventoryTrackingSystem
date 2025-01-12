@@ -22,6 +22,13 @@
             Name = name;
             Role = role;
         }
-            
+
+        public User()
+        {
+            UserId = string.Empty;
+            Password = string.Empty;
+            Name = string.Empty;
+            Role = string.Empty;
+        }
     }
 }

@@ -192,7 +192,20 @@ namespace BookstoreInventoryTracking.Helpers
         // Extension method to safely retrieve string values from a database record
         public static string GetStringSafe(this IDataRecord reader, string columnName)
         {
-            return reader[columnName] != DBNull.Value ? reader[columnName].ToString() : string.Empty;
+            try
+            {
+                var ordinal = reader.GetOrdinal(columnName);
+                if (!reader.IsDBNull(ordinal))
+                {
+                    return reader.GetString(ordinal);
+                }
+            }
+            catch (IndexOutOfRangeException)
+            {
+                // Log or handle the case where the column doesn't exist
+                return string.Empty;
+            }
+            return string.Empty;
         }
     }
 }
