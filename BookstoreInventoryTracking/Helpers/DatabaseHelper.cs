@@ -8,7 +8,7 @@ namespace BookstoreInventoryTracking.Helpers
     // Helper class to manage database operations
     public static class DatabaseHelper
     {
-        private static readonly string ConnectionString = ""; // Database connection string
+        private static readonly string ConnectionString = "Host=database-1.clcqga86m19q.eu-central-1.rds.amazonaws.com;Port=5432;Database=BookstoreInventory;Username=postgres;Password=M3hIRREHBYkdrhPJrKJR;"; // Database connection string
 
         // Insert a new book into the database
         public static void InsertBook(Book book)
