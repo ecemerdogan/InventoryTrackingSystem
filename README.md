@@ -45,5 +45,21 @@ admin: password123 (Admin)
 user1: password456 (Mod)
 user2: password789 (Mod)
 ```
-Choose one of the given account information to log in to the Inventory Tracking System. If you choose the "admin" role as entrance information, in addition to the all properties that other users have you will have a chance to add a new user to the system.
+Choose one of the given account information to log in to the Inventory Tracking System. If you choose the "admin" role as entrance information, in addition to all the other users' properties, you will have a chance to add a new user to the system.
+
+## Log-in Window
+<p align="center">
+  <img src="UI_images/LogInWindow.png" alt="Logo" width="500">
+</p>
+
+## Main Window
+<p align="center">
+  <img src="UI_images/MainWindowUI.png" alt="Logo" width="500">
+</p>
+
+## Add User & Add Book 
+<p align="center">
+  <img src="UI_images/AddBook.png" alt="Logo" width="700">
+  <img src="UI_images/AddUser.png" alt="Logo" width="700">
+</p>
 
