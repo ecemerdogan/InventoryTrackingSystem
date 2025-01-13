@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookstoreInventoryTracking")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64711fe1c0d07786b3dbf24bb4b461f76299057a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac1368ca200625f6b1083bb55afd0a1ae96af30f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookstoreInventoryTracking")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookstoreInventoryTracking")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

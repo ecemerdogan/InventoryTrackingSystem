@@ -133,7 +133,6 @@ C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\bin\Deb
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking.csproj.AssemblyReference.cache
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Bookstor.999612D4.Up2Date
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.g.cs
-C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\BookstoreInventoryTracking_MarkupCompile.lref
 C:\Users\ecem\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.baml
 C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.g.cs
 C:\Users\omerf\Desktop\InventoryTrackingSystem\BookstoreInventoryTracking\obj\Debug\net8.0-windows\Views\AddUserWindow.baml
